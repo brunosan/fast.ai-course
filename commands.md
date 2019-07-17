@@ -17,3 +17,13 @@ gcloud compute instances create $INSTANCE_NAME \
         --boot-disk-size=200GB \
         --metadata="install-nvidia-driver=True" \
         --preemptible
+
+gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080
+
+
+### Ideas
+
+* detect brand of car.
+* speed based on pairs of images.
+* Classify which recycling bin an item goes.
+* building footprints on satellite images.
